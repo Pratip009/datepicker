@@ -1,4 +1,4 @@
-/* Global Styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -39,7 +39,7 @@ button:disabled {
   cursor: not-allowed;
 }
 
-/* Container and layout */
+
 .app-container {
   padding: 20px;
   text-align: center;
@@ -72,7 +72,7 @@ button:disabled {
   width: 150px;
 }
 
-/* Date Range Info */
+
 .range-info {
   margin-top: 40px;
 }
@@ -96,7 +96,7 @@ button:disabled {
   font-size: 1rem;
 }
 
-/* Weekday Date Range Picker */
+
 .weekday-date-range-picker {
   margin-top: 40px;
 }
@@ -114,7 +114,7 @@ button:disabled {
   justify-content: space-around;
   font-weight: bold;
   margin-bottom: 10px;
-  background-color: transparent; /* Added background color for the day names */
+  background-color: transparent;
   padding: 5px 0;
 }
 
@@ -123,15 +123,15 @@ button:disabled {
   text-align: center;
   border-radius: 10px;
   padding: 5px;
-  background-color: #ff9090; /* Light gray background for the header days */
-  color: #333; /* Dark text for visibility */
+  background-color: #ff9090;
+  color: #333;
   font-weight: bold;
 }
 
 .calendar-header-cell:nth-child(1),
 .calendar-header-cell:nth-child(7) {
-  background-color: #b8b8b8; /* Highlight weekend days (Sun and Sat) */
-  color: #d32f2f; /* Red text for weekends */
+  background-color: #b8b8b8;
+  color: #d32f2f;
 }
 
 .calendar-grid {
@@ -147,7 +147,7 @@ button:disabled {
   text-align: center;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  color: #333; /* Default color for dates */
+  color: #333;
 }
 
 .calendar-cell:hover {

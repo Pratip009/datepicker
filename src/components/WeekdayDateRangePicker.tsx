@@ -20,12 +20,12 @@ const WeekdayDateRangePicker: React.FC<WeekdayDateRangePickerProps> = ({
 
   const isWeekend = (date: Date) => {
     const day = date.getDay();
-    return day === 0 || day === 6; // Sunday or Saturday
+    return day === 0 || day === 6;
   };
 
   const isWeekday = (date: Date): boolean => {
     const day = date.getDay();
-    return day >= 1 && day <= 5; // Monday to Friday
+    return day >= 1 && day <= 5;
   };
 
   const calculateWeekendsInRange = (start: Date, end: Date): string[] => {
@@ -57,31 +57,31 @@ const WeekdayDateRangePicker: React.FC<WeekdayDateRangePickerProps> = ({
   };
 
   const formatDate = (date: Date): string => {
-    // Create a new date object that represents the date in UTC (0 hours)
+    
     const normalizedDate = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
-    return normalizedDate.toISOString().split("T")[0]; // Format as YYYY-MM-DD
+    return normalizedDate.toISOString().split("T")[0]; 
   };
 
 
   const handleDateClick = (date: Date) => {
-    // Create a copy of the date to avoid mutation issues
+   
     const selectedDate = new Date(date);
   
-    // Ignore weekends
+   
     if (isWeekend(selectedDate)) {
       return;
     }
   
-    // Ensure the date is treated as a local date without time zone shift
+ 
     const localDate = new Date(selectedDate.setHours(0, 0, 0, 0));
   
-    // Set the start date if there's no start date or if both start and end dates are set
+  
     if (!startDate || (startDate && endDate)) {
-      setStartDate(new Date(localDate)); // Use new Date() to ensure no mutation
+      setStartDate(new Date(localDate));
       setEndDate(null);
-      setWeekdaysInRange([]); // Reset weekdays in range
+      setWeekdaysInRange([]); 
     } else if (startDate && localDate > startDate) {
-      setEndDate(new Date(localDate)); // Use new Date() to ensure no mutation
+      setEndDate(new Date(localDate));
       const weekdays = calculateWeekdaysInRange(startDate, localDate);
       setWeekdaysInRange(weekdays);
       onChange(

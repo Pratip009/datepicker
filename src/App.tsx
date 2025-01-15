@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import WeekdayDateRangePicker from "./components/WeekdayDateRangePicker";
-import "./index.css"; // Importing a custom CSS file for styling
+import "./index.css"; 
 
 const App: React.FC = () => {
   const [selectedRange, setSelectedRange] = useState<[string, string] | null>(null);
@@ -31,8 +31,8 @@ const App: React.FC = () => {
   ];
 
   predefinedRanges.forEach((range) => {
-    range.range[0].setHours(0, 0, 0, 0); // Normalize start date
-    range.range[1].setHours(0, 0, 0, 0); // Normalize end date
+    range.range[0].setHours(0, 0, 0, 0);
+    range.range[1].setHours(0, 0, 0, 0);
   });
 
 
@@ -65,7 +65,7 @@ const App: React.FC = () => {
      <div className="app-container">
       <h1 className="app-title">Weekday Date Range Picker</h1>
 
-      {/* Date Picker for Year and Month Selection */}
+      
       <div className="date-picker">
         <label>
           <span>Select Year:</span>
